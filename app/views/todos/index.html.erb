@@ -1,7 +1,9 @@
-<% @todo.each do |t| %>
-  <%= t.do %>
-  <%= link_to "詳細", todo_path(@todo) %>
-  <%= link_to "編集", edit_todo_path(@todo) %>
-  <%= link_to "削除", todo_path(@todo) %><br>
-<% end %>
-  <%= link_to "新規作成", new_todo_path %>
+<h2>Todo一覧</h2>
+  <% @todos.each do |t| %>
+    <%= t.do %>
+    <%= link_to "詳細", todo_path(t) %>
+    <%= link_to "編集", edit_todo_path(t) %>
+    <%= link_to "削除", todo_path(t), method: :delete, data: {confirm: "削除しますか？" } %><br>
+  <% end %>
+
+  <%= link_to "新規作成", new_todo_path %><br>
