@@ -3,13 +3,10 @@ class TodosController < ApplicationController
 
   def index
     @todos = Todo.all
+    @todo = Todo.new
   end
 
   def show
-  end
-
-  def new
-    @todo = Todo.new  #なぜnewの記載？
   end
 
   def create
