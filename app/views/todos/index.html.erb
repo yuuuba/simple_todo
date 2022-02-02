@@ -6,4 +6,8 @@
     <%= link_to "削除", todo_path(t), method: :delete, data: {confirm: "削除しますか？" } %><br>
   <% end %>
 
-  <%= link_to "新規作成", new_todo_path %><br>
+<h2>Todo作成</h2>
+  <%= form_with model: @todo do |form| %>
+  <%= form.text_field :do %>
+  <%= form.submit %>
+  <% end %>
