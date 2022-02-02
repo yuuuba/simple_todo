@@ -1,0 +1,7 @@
+<h2>編集</h2>
+<%= form_with model: @todo do |t|%>
+  <%= t.text_field :do %>
+  <%= t.submit %>
+<% end %>
+
+<%= link_to "戻る" , todos_path %>
